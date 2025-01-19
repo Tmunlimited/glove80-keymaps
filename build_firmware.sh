@@ -76,7 +76,7 @@ build_firmware() {
     
     # Run initial build
     log "Running rake build..."
-    "${SCRIPT_DIR}/rake" -B || die "Rake build failed"
+    "${SCRIPT_DIR}/rake" dtsi -B || die "Rake build failed"
     
     # Create keymap file
     create_keymap
