@@ -744,9 +744,9 @@
 /* Custom Defined Behaviors */
 / {
 // NOTE: Use the many #define settings below to customize this keymap!
-//#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
+#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
 //#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
-#define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
+#define OPERATING_SYSTEM 'W' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define SPACE_FORGIVENESS    // allow lingering taps on the space bar
@@ -8059,13 +8059,13 @@ UNICODE_MORPH_MODS
   world_i_base: world_i_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_i_acute>, <&world_i_LCTL>;
+    bindings = <&world_i_diaeresis>, <&world_i_LCTL>;
     mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
   };
   world_i_LCTL: world_i_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_i_diaeresis>, <&world_i_RCTL>;
+    bindings = <&world_i_acute>, <&world_i_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_i_RCTL: world_i_RCTL {
@@ -8077,7 +8077,7 @@ UNICODE_MORPH_MODS
   world_e_base: world_e_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_e_acute>, <&world_e_LALT>;
+    bindings = <&world_e_diaeresis>, <&world_e_LALT>;
     mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
   };
   world_e_LALT: world_e_LALT {
@@ -8095,7 +8095,7 @@ UNICODE_MORPH_MODS
   world_e_LCTL: world_e_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_e_diaeresis>, <&world_e_RCTL>;
+    bindings = <&world_e_acute>, <&world_e_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_e_RCTL: world_e_RCTL {
@@ -8107,7 +8107,7 @@ UNICODE_MORPH_MODS
   world_a_base: world_a_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_a_acute>, <&world_a_LALT>;
+    bindings = <&world_a_diaeresis>, <&world_a_LALT>;
     mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
   };
   world_a_LALT: world_a_LALT {
@@ -8125,7 +8125,7 @@ UNICODE_MORPH_MODS
   world_a_LCTL: world_a_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_a_diaeresis>, <&world_a_RCTL>;
+    bindings = <&world_a_acute>, <&world_a_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_a_RCTL: world_a_RCTL {
@@ -8137,13 +8137,13 @@ UNICODE_MORPH_MODS
   world_y_base: world_y_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_y_acute>, <&world_y_diaeresis>;
+    bindings = <&world_y_diaeresis>, <&world_y_acute>;
     mods = <(MOD_LCTL)>;
   };
   world_o_base: world_o_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_o_acute>, <&world_o_LALT>;
+    bindings = <&world_o_diaeresis>, <&world_o_LALT>;
     mods = <(MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
   };
   world_o_LALT: world_o_LALT {
@@ -8161,7 +8161,7 @@ UNICODE_MORPH_MODS
   world_o_LCTL: world_o_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_o_diaeresis>, <&world_o_RCTL>;
+    bindings = <&world_o_acute>, <&world_o_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_o_RCTL: world_o_RCTL {
@@ -8173,13 +8173,13 @@ UNICODE_MORPH_MODS
   world_u_base: world_u_base {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_u_acute>, <&world_u_LCTL>;
+    bindings = <&world_u_diaeresis>, <&world_u_LCTL>;
     mods = <(MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
   };
   world_u_LCTL: world_u_LCTL {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&world_u_diaeresis>, <&world_u_RCTL>;
+    bindings = <&world_u_acute>, <&world_u_RCTL>;
     mods = <(MOD_RCTL|MOD_RSFT)>;
   };
   world_u_RCTL: world_u_RCTL {
@@ -10716,9 +10716,9 @@ UNICODE_MORPH_MODS
 
         layer_Enthium {
             bindings = <
-                     &kp HOME                        &kp END                          &kp A                          &kp B                          &kp C                                                                                                                                                                                     &kp D                           &kp E                           &kp F                        &kp LEFT                     &kp RIGHT
-                    &kp PG_UP                         &kp N1                         &kp N2                         &kp N3                         &kp N4     &kp N5                                                                                                                                         &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                        &kp UP
-                    &kp PG_DN                          &kp B                          &kp Y                          &kp O                          &kp U   &kp SEMI                                                                                                                                          &kp X                           &kp L                           &kp D                           &kp W                           &kp V                      &kp DOWN
+                       &kp F1                         &kp F2                         &kp F3                         &kp F4                         &kp F5                                                                                                                                                                                    &kp F7                          &kp F8                          &kp F9                         &kp F10                       &kp F11
+                       &kp F6                         &kp N1                         &kp N2                         &kp N3                         &kp N4     &kp N5                                                                                                                                         &kp N6                          &kp N7                          &kp N8                          &kp N9                          &kp N0                       &kp F12
+                    &kp GRAVE                          &kp B                          &kp Y                          &kp O                          &kp U   &kp SEMI                                                                                                                                          &kp X                           &kp L                           &kp D                           &kp W                           &kp V                      &kp BSLH
                         &kp Z  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (E, LAYER_Enthium)  &LeftIndex (A, LAYER_Enthium)  &kp COMMA                                                                                                                                          &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                         &kp Q
  &sticky_key_modtap LSFT LSFT                        &kp SQT                      &kp MINUS                      &kp EQUAL                        &kp DOT   &kp FSLH  &thumb LAYER_Function ESC  &thumb LAYER_Emoji INSERT      &lower      &lower     &thumb LAYER_World DELETE  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp P                           &kp F  &sticky_key_modtap RSFT RSFT
          &magic LAYER_Magic 0                      &kp GRAVE                       &kp LBKT                       &kp RBKT       &stumb LAYER_Typing LSFT             &thumb LAYER_Cursor SPACE    &thumb LAYER_Number TAB  &caps_word  &caps_word  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R                &stumb LAYER_Typing RSFT                    &parang_left                   &parang_right                        &kp BSLH          &magic LAYER_Magic 0
@@ -10906,8 +10906,8 @@ UNICODE_MORPH_MODS
      &none               &none               &none               &none               &none                                                                                                                             &none           &none           &none      &none        &none
    &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL     &kp INS                                                                                                    &kp INS    &kp DEL         &kp TAB       &kp SPACE    &kp RET      &kp ESC
  &kp _C(K)           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp _CUT                                                                                                   &kp _CUT   &kp BSPC       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
- &kp _C(L)  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &kp _COPY                                                                                                  &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
- &kp _C(J)         &select_all        &select_line        &select_word           &kp _FIND  &kp _PASTE  &mod_tab _A_TAB  &mod_tab _G_TAB  &tog LAYER_Cursor  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
+ &kp _C(L)  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &kp _COPY                                                                                                  &kp _COPY   &kp LEFT        &kp DOWN          &kp UP  &kp RIGHT    &kp _C(L)
+ &kp _C(J)         &select_all        &select_line        &select_word           &kp _FIND  &kp _PASTE  &mod_tab _A_TAB  &mod_tab _G_TAB  &tog LAYER_Cursor  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_DN       &kp PG_UP    &kp END    &kp _C(J)
  &kp _C(H)      &kp _FIND_PREV        &extend_line        &extend_word      &kp _FIND_NEXT                        &none    &mod_tab LCTL            &kp TAB   &select_all  &select_line  &select_word              &kp _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
             >;
         };
@@ -10949,7 +10949,7 @@ UNICODE_MORPH_MODS
             bindings = <
      &none      &none      &none      &none     &none                                                                                                         &none                &none                &none                &none        &none
  &kp GRAVE   &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT    &kp DOT                                                                         &none  &sk RIGHT_INDEX_MOD  &sk RIGHT_MIDDY_MOD  &sk RIGHT_RINGY_MOD  &sk RIGHT_PINKY_MOD        &none
-  &kp EXCL  &kp COMMA   &kp LBRC   &kp RBRC  &kp SEMI  &kp QMARK                                                                     &kp GRAVE             &kp LEFT               &kp UP             &kp DOWN            &kp RIGHT     &kp HOME
+  &kp EXCL  &kp COMMA   &kp LBRC   &kp RBRC  &kp SEMI  &kp QMARK                                                                     &kp GRAVE             &kp LEFT             &kp DOWN               &kp UP            &kp RIGHT     &kp HOME
   &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                                       &kp DQT             &kp BSPC              &kp TAB            &kp SPACE              &kp RET      &kp END
  &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR  &tog LAYER_Symbol   &none   &none    &kp SQT              &kp DEL          &kp LS(TAB)         &select_word         &select_line  &select_all
      &none   &kp AMPS    &kp SQT    &kp DQT  &kp PLUS             &kp PRCNT  &kp COLON    &kp AT              &none   &none   &none                       &kp _UNDO            &kp _REDO         &extend_word         &extend_line        &none
@@ -10958,12 +10958,12 @@ UNICODE_MORPH_MODS
 
         layer_Mouse {
             bindings = <
-  &none                   &none                   &none           &none                    &none                                                                                                             &none                 &none                   &none                    &none     &none
-  &none                   &none                   &none           &none                    &none       &none                                                                         &none     &sk RIGHT_INDEX_MOD   &sk RIGHT_MIDDY_MOD     &sk RIGHT_RINGY_MOD      &sk RIGHT_PINKY_MOD     &none
-  &none                   &none  &msc MOUSE_SCROLL_LEFT    &mmv MOVE_UP  &msc MOUSE_SCROLL_RIGHT    &kp _CUT                                                                      &kp _CUT  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_RIGHT     &none
-  &none    &msc MOUSE_SCROLL_UP          &mmv MOVE_LEFT  &mmv MOVE_DOWN          &mmv MOVE_RIGHT   &kp _COPY                                                                     &kp _COPY                  &mo 24                &mo 25                  &mo 23                &kp K_APP     &none
-  &none  &msc MOUSE_SCROLL_DOWN                  &mo 23          &mo 25                   &mo 24  &kp _PASTE  &mkp MCLK  &kp K_APP  &mkp MB5  &tog LAYER_Mouse   &none   &none  &kp _PASTE          &mmv MOVE_LEFT          &mmv MOVE_UP          &mmv MOVE_DOWN          &mmv MOVE_RIGHT     &none
-  &none                   &none                   &none           &none                    &none              &mkp LCLK  &mkp RCLK  &mkp MB4             &none   &none   &none                           &mkp LCLK             &mkp RCLK               &mkp MCLK                 &mkp MB4  &mkp MB5
+  &none                   &none                   &none           &none                    &none                                                                                                             &none                   &none                 &none                    &none     &none
+  &none                   &none                   &none           &none                    &none       &none                                                                         &none     &sk RIGHT_INDEX_MOD     &sk RIGHT_MIDDY_MOD   &sk RIGHT_RINGY_MOD      &sk RIGHT_PINKY_MOD     &none
+  &none                   &none  &msc MOUSE_SCROLL_LEFT    &mmv MOVE_UP  &msc MOUSE_SCROLL_RIGHT    &kp _CUT                                                                      &kp _CUT  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT     &none
+  &none    &msc MOUSE_SCROLL_UP          &mmv MOVE_LEFT  &mmv MOVE_DOWN          &mmv MOVE_RIGHT   &kp _COPY                                                                     &kp _COPY                  &mo 24                  &mo 25                &mo 23                &kp K_APP     &none
+  &none  &msc MOUSE_SCROLL_DOWN                  &mo 23          &mo 25                   &mo 24  &kp _PASTE  &mkp MCLK  &kp K_APP  &mkp MB5  &tog LAYER_Mouse   &none   &none  &kp _PASTE          &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT     &none
+  &none                   &none                   &none           &none                    &none              &mkp LCLK  &mkp RCLK  &mkp MB4             &none   &none   &none                           &mkp LCLK               &mkp RCLK             &mkp MCLK                 &mkp MB4  &mkp MB5
             >;
         };
 
