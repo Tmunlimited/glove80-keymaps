@@ -1,2 +1,4 @@
 *.tmp
 *.min
+*.pdf
+dist/
